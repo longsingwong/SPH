@@ -65,9 +65,9 @@ namespace sph{
     void draw()
     {
       if ( _flag ){
-        glMaterialfv(GL_FRONT, GL_DIFFUSE, red);
+        glMaterialfv(GL_FRONT, GL_DIFFUSE, lblue);
       }else{
-        glMaterialfv(GL_FRONT, GL_DIFFUSE, blue);
+        glMaterialfv(GL_FRONT, GL_DIFFUSE, dblue);
       }
       glPushMatrix();
       glTranslated( _position[0], _position[1], _position[2] );

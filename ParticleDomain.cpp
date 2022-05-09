@@ -106,7 +106,7 @@ namespace sph{
   
   	    T_ParticleVector& firstGridCell = (*_grid)(0,0,0);
   
-  	    for (double x = -_boxSize.x/2.0; x < -_boxSize.x/4.0; x += DIAMETER/2.0) {
+  	    for (double x = -_boxSize.x/2.0; x < -_boxSize.x*3.0/8.0; x += DIAMETER/2.0) {
   	      for (double y = -_boxSize.y/2.0; y < _boxSize.y/2.0; y+= DIAMETER/2.0) {
   	        for (double z = -_boxSize.z/2.0; z < _boxSize.z/2.0; z+= DIAMETER/2.0) {
   	          firstGridCell.push_back(T_Particle(T_Vec3(x,y,z)));
@@ -114,7 +114,7 @@ namespace sph{
   	      }
   	    }
 
-        for (double x = _boxSize.x/4.0; x < _boxSize.x/2.0; x += DIAMETER/2.0) {
+        for (double x = _boxSize.x*3.0/8.0; x < _boxSize.x/2.0; x += DIAMETER/2.0) {
   	      for (double y = -_boxSize.y/2.0; y < _boxSize.y/2.0; y+= DIAMETER/2.0) {
   	        for (double z = -_boxSize.z/2.0; z < _boxSize.z/2.0; z+= DIAMETER/2.0) {
   	          firstGridCell.push_back(T_Particle(T_Vec3(x,y,z)));
@@ -231,7 +231,7 @@ namespace sph{
     static float shininess = 10.0f;
   
     glEnable(GL_LIGHTING);
-    glMaterialfv(GL_FRONT, GL_DIFFUSE, blue);
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, lblue);
     glMaterialfv(GL_FRONT, GL_SPECULAR, white);
     glMaterialfv(GL_FRONT, GL_SHININESS, &shininess);
   
