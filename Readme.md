@@ -26,21 +26,6 @@ make
 * Keyboard '3' - Faucet.
 * Keyboard 'g' - Switch Grid Visibility.
 
-#### Sample solutions
-
-* Result: Faucet 
-
-![Faucet](sample_sols/faucet.gif)
-
-* Result: Dam Break 
-
-![Dam Break](sample_sols/dam_break.gif)
-
-* Result: Water Drop 
-
-![Water Drop](sample_sols/water_drop.gif)
-
-
 #### Reference 
 
 * Müller, Matthias, David Charypar, and Markus Gross. "Particle-based fluid simulation for interactive applications." In Proceedings of the 2003 ACM SIGGRAPH/Eurographics symposium on Computer animation, pp. 154-159. Eurographics Association, 2003.

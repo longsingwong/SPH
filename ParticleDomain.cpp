@@ -91,6 +91,39 @@ namespace sph{
         break;
   	  }
   
+      case SCENARIO_DUODAM:{
+  	    _boxSize.x = BOX_SIDE * 2. ; 
+  	    _boxSize.y = BOX_SIDE * 2. ; 
+  	    _boxSize.z = BOX_SIDE / 2. ;
+  
+  	    int gridXCellMax = ceil(_boxSize.x/DIAMETER);
+  	    int gridYCellMax = ceil(_boxSize.y/DIAMETER);
+  	    int gridZCellMax = ceil(_boxSize.z/DIAMETER);
+  
+  	    _grid = new ParticleGrid<T_dat>(gridXCellMax, gridYCellMax, gridZCellMax);
+  
+  	    addWalls(_boxSize, _walls);
+  
+  	    T_ParticleVector& firstGridCell = (*_grid)(0,0,0);
+  
+  	    for (double x = -_boxSize.x/2.0; x < -_boxSize.x/4.0; x += DIAMETER/2.0) {
+  	      for (double y = -_boxSize.y/2.0; y < -_boxSize.y/4.0; y+= DIAMETER/2.0) {
+  	        for (double z = -_boxSize.z/2.0; z < _boxSize.z/2.0; z+= DIAMETER/2.0) {
+  	          firstGridCell.push_back(T_Particle(T_Vec3(x,y,z)));
+  	        }
+  	      }
+  	    }
+
+        for (double x = _boxSize.x/4.0; x < _boxSize.x/2.0; x += DIAMETER/2.0) {
+  	      for (double y = _boxSize.y/4.0; y < _boxSize.y/2.0; y+= DIAMETER/2.0) {
+  	        for (double z = -_boxSize.z/2.0; z < _boxSize.z/2.0; z+= DIAMETER/2.0) {
+  	          firstGridCell.push_back(T_Particle(T_Vec3(x,y,z)));
+  	        }
+  	      }
+  	    }
+        break;
+  	  }
+
   	  default:{
   		  printf("case/scenario is not available!\n");
   	  }

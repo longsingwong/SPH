@@ -66,6 +66,10 @@ void keyboardCallback(unsigned char key, int x, int y)
       particleSystem->loadScenario(SCENARIO_FAUCET);
       break;
     }
+    case '4':{
+      particleSystem->loadScenario(SCENARIO_DUODAM);
+      break;
+    }
 
     default:{
       printf("input is not recognized ! \n" );

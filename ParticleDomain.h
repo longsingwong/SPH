@@ -11,6 +11,7 @@
 #define SCENARIO_DAM 1
 #define SCENARIO_CUBE 2
 #define SCENARIO_FAUCET 3
+#define SCENARIO_DUODAM 4
 
 namespace sph{
 
