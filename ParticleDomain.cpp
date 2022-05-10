@@ -231,7 +231,7 @@ namespace sph{
     static float shininess = 10.0f;
   
     glEnable(GL_LIGHTING);
-    glMaterialfv(GL_FRONT, GL_DIFFUSE, lblue);
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, gray);
     glMaterialfv(GL_FRONT, GL_SPECULAR, white);
     glMaterialfv(GL_FRONT, GL_SHININESS, &shininess);
   

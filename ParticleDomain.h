@@ -28,11 +28,11 @@ namespace sph{
     constexpr static double GAS_STIFFNESS        = 3.0   ; // Nm/kg is gas constant of water vapor
     constexpr static double REST_DENSITY         = 1000  ; // kg/m^3 is rest density of water particle
     constexpr static double PARTICLE_MASS        = 0.02  ; // kg
-    constexpr static double VISCOSITY            = 3.5   ; // Ns/m^2 or Pa*s viscosity of water
-    constexpr static double SURFACE_TENSION      = 0.073 ; // N/m
+    constexpr static double VISCOSITY            = 1.5   ; // Ns/m^2 or Pa*s viscosity of water
+    constexpr static double SURFACE_TENSION      = 0.0 ; // N/m
     constexpr static double SURFACE_THRESHOLD    = 7.07  ;
     constexpr static double KERNEL_PARTICLES     = 20.0  ;
-    constexpr static double GRAVITY_ACCELERATION = -9.8  ; 
+    constexpr static double GRAVITY_ACCELERATION = 9.8  ; 
     constexpr static double WALL_K               = 10000 ;
     constexpr static double WALL_DAMPING         = -0.9  ; 
     constexpr static double BOX_SIDE             = 0.4   ;
