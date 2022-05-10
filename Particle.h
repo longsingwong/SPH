@@ -101,7 +101,7 @@ namespace sph{
   size_t Particle<T_dat>::_count = 0 ; 
   
   template<typename T_dat>
-  float Particle<T_dat>::_particleDrawRadius = 0.01 ; 
+  float Particle<T_dat>::_particleDrawRadius = 0.03 ; 
 }
 
 
